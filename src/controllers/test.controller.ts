@@ -12,6 +12,7 @@ export const handleGetAllUsers = async (req: Request, res: Response, next: NextF
 
 export const handleError = async (req: Request, res: Response, next: NextFunction) => {
   try {
+    // Test if CI work
     throw new AppError(418, 'Hello teapot');
   } catch (error) {
     next(error);
